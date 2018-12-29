@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    background: url("guam_sea.8e4ea734.jpg") no-repeat center top fixed;
+    background-size: cover;
+
+}
+
+
+canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#video-source {
+    display: none;
+}
+
+#video-overlay {
+}
