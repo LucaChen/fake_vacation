@@ -263,12 +263,10 @@ function segmentBodyInRealTime(video) {
         requestAnimationFrame(bodySegmentationFrame);
     }
 
-    let drawMask = function (bodySegmentation) {
-        //ctx.globalCompositeOperation = 'destination-in';
+    const drawMask = function (bodySegmentation) {
         const image_data = ctx.getImageData(0, 0, bodySegmentation.width, bodySegmentation.height);
 
         for (let i = 0; i < bodySegmentation.data.length; ++i) {
-            // let pixelData = image_data[]
             if (bodySegmentation.data[i] === 1) {
                 image_data.data[i * 4 + 3] = 255;
             } else {
